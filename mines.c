@@ -123,6 +123,8 @@ void reset_game(struct mines_ctx* ctx) {
 		idx += sprintf(buf + idx, "\r\n");
 	}
 	idx += sprintf(buf + idx, RST_STL, NULL);
+
+	ansi_move_cursor(0, 0);
 	printf("%s", buf);
 	free(buf);
 
